@@ -19,8 +19,6 @@
             <div class="card-header text-center">
               <h2 class="mb-3 mt-3">
                 <ng-container *ngIf="activeState === STATE_LOGIN">Login</ng-container>
-                <ng-container *ngIf="activeState === STATE_REGISTER">Register</ng-container>
-                <ng-container *ngIf="activeState === STATE_PASSWORD_FORGOT">Password forgot</ng-container>
               </h2>
             </div>
             <div class="card-body">
@@ -36,8 +34,6 @@
             </div>
 
             <div class="card-footer" *ngIf="activeState === STATE_LOGIN">
-              <button class="btn btn-link" type="button" (click)="setActiveState(STATE_REGISTER)">Register</button>
-              <button class="btn btn-link" type="button" (click)="setActiveState(STATE_PASSWORD_FORGOT)">Password forgot</button>
             </div>
 
             <div class="card-footer" *ngIf="activeState !== STATE_LOGIN">
